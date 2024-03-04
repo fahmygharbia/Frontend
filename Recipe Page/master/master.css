@@ -1,0 +1,311 @@
+:root {
+    --font-young-serif: "Young Serif", serif;
+    --font-outfit: "Outfit", sans-serif;
+
+    --main-color-nutmeg: hsl(14, 45%, 36%);
+    --main-color-dark-raspberry: hsl(332, 51%, 32%);
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+
+    --font-size-paragraph: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--eggshell);
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.recipe-page {
+    background-color: var(--white);
+    border-radius: 25px;
+    margin: 25px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+@media (max-width: 768px) {
+    .recipe-page {
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+}
+
+.image {
+    width: 100%;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .image img {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+}
+
+.container .description {
+    padding: 15px 25px;
+}
+
+.container .description h2 {
+    font-family: var(--font-young-serif);
+    font-size: 35px;
+    color: var(--dark-charcoal);
+}
+
+@media (max-width: 768px) {
+    .container .description h2 {
+        font-size: 20px;
+    }
+}
+
+.container .description p {
+    font-family: var(--font-outfit);
+    line-height: 1.5;
+    color: var(--wenge-brown);
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+@media (max-width: 768px) {
+    .container .description p {
+        font-size: var(--font-size-paragraph);
+    }
+}
+
+.box-preparation {
+    padding: 25px;
+    background-color: var(--rose-white);
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .box-preparation {
+        padding: 10px 25px;
+        margin: 0 25px;
+    }
+}
+
+.box-preparation h3 {
+    padding: 15px 20px;
+    color: var(--main-color-dark-raspberry);
+    font-size: 25px;
+    font-family: var(--font-outfit);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .box-preparation h3 {
+        font-size: 20px;
+    }
+}
+
+.box-preparation div {
+    color: var(--wenge-brown);
+    font-family: var(--font-outfit);
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.box-preparation div::before {
+    content: ".";
+    position: absolute;
+    top: -25%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: var(--main-color-dark-raspberry);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.box-preparation div span {
+    color: var(--dark-charcoal);
+    font-weight: bold;
+}
+
+.box-ingredients {
+    padding: 25px;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+@media (max-width: 768px) {
+    .box-ingredients {
+        padding: 10px 25px;
+    }
+}
+
+.box-ingredients h2 {
+    color: var(--main-color-nutmeg);
+    font-family: var(--font-young-serif);
+    margin: 15px 0;
+}
+
+.box-ingredients div {
+    color: var(--wenge-brown);
+    font-family: var(--font-outfit);
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.box-ingredients div::before {
+    content: ".";
+    position: absolute;
+    top: -25%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 50px;
+    color: var(--main-color-nutmeg);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.box-instructions {
+    padding: 25px;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+@media (max-width: 768px) {
+    .box-instructions {
+        padding: 10px 25px;
+    }
+}
+
+.box-instructions h2 {
+    color: var(--main-color-nutmeg);
+    font-family: var(--font-young-serif);
+    margin: 15px 0;
+}
+
+.box-instructions div {
+    color: var(--wenge-brown);
+    font-family: var(--font-outfit);
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+    counter-increment: my-counter;
+}
+
+
+.box-instructions div::before {
+    content: counter(my-counter)".";
+    position: absolute;
+    top: 25%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: var(--main-color-nutmeg);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.box-instructions div span {
+    color: var(--dark-charcoal);
+    font-weight: bold;
+}
+
+.box-nutrition {
+    padding: 25px;
+}
+
+@media (max-width: 768px) {
+    .box-nutrition {
+        padding: 10px 25px;
+    }
+}
+
+.box-nutrition h2 {
+    color: var(--main-color-nutmeg);
+    font-family: var(--font-young-serif);
+    margin: 15px 0;
+}
+
+.box-nutrition p {
+    font-family: var(--font-outfit);
+    font-size: 20px;
+    color: var(--wenge-brown);
+    line-height: 1.5;
+    margin: 15px 0;
+}
+
+.box-nutrition div {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.box-nutrition div:not(:last-child) {
+    border-bottom: 1px solid var(--main-color-nutmeg);
+}
+
+.box-nutrition div span {
+    flex: 1;
+    font-size: 18px;
+    font-family: var(--font-outfit);
+}
+
+.box-nutrition div span:last-child {
+    color: var(--main-color-nutmeg);
+    font-weight: bold;
+}
